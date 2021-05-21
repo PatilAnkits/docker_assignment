@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mysql_dev:
+    image: mysql:8.0.2
+    environment:
+      MYSQL_ROOT_PASSWORD: scalereal
+      MYSQL_DATABASE: scalerealInterns
+    ports:
+      - "3308:3306"
+
+  custom_mysql_conta:
+    image: my-mysql-img
+    environment:
+      MYSQL_ROOT_PASSWORD: scalereal
+      MYSQL_USER: scalereal
+      MYSQL_PASSWORD: scalereal
+    ports:
+      - "3316:3306"
+
